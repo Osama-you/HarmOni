@@ -42,6 +42,7 @@ body.is--loading {
 
 body.is--loading .header,
 body.is--loading .app-nav,
+body.is--loading .main,
 body.is--loading .app-aside .options .option {
   transition: opacity 1s cubic-bezier(0.33, 0, 0.2, 1) 0.75s;
 }
@@ -71,6 +72,7 @@ body.cover--is--visible .section.cover {
 
 body.cover--is--visible .header,
 body.cover--is--visible .app-nav,
+body.cover--is--visible .main,
 body.cover--is--visible .app-aside .options .option {
   opacity: 0;
 }

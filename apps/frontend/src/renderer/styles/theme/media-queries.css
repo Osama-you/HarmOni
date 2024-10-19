@@ -7,9 +7,6 @@
     --font--size-huge: clamp(36px, 6.35vw, 6.35vw);
     --font--size-large: clamp(26px, 2.24vw, 2.24vw);
   }
-  .section > .content {
-    grid-column: 3 / -1;
-  }
 }
 
 /* 6 columns */
@@ -22,6 +19,13 @@
     --font--size-medium: 22px;
   }
 
+  .section > .content {
+    grid-column: 1 / -1;
+  }
+
+  .section > .content.main {
+    padding-top: 56px;
+  }
 }
 
 /* 3 columns */

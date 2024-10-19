@@ -2,6 +2,8 @@ import './style.css';
 
 import clsx from 'classnames';
 
+import { useNavigation } from '../../contexts/NavigationContext';
+import { navigationConfig } from '../../navigation';
 import { navigationMenuClasses } from './navigationMenuClasses';
 
 /**
@@ -12,26 +14,25 @@ import { navigationMenuClasses } from './navigationMenuClasses';
  * @returns {JSX.Element} The rendered navigation menu component.
  */
 function NavigationMenu(): JSX.Element {
+  const { currentTab, setCurrentTab } = useNavigation();
+
   /**
    * Handles the click event when a navigation item is selected.
    *
    * @param {string} key - The unique key of the selected item.
    */
   const handleItemSelect = (key: string) => {
-    console.log(key); // You can replace this with your actual item selection handling logic.
+    setCurrentTab(key); // Update the current tab in the navigation context
   };
 
-  // Menu items to be rendered
-  const menuItems = [
-    { key: 'Item1', label: 'Item 1' },
-    { key: 'Item2', label: 'Item 2' },
-    { key: 'Item3', label: 'Item 3' },
-    { key: 'Item4', label: 'Item 4' },
-    { key: 'Item5', label: 'Item 5' },
-    { key: 'Item6', label: 'Item 6' },
-    { key: 'Item7', label: 'Item 7' },
-    { key: 'Item8', label: 'Item 8' },
-  ];
+  // Dynamically generate menu items from the navigationConfig
+  const menuItems = Object.keys(navigationConfig)
+    .filter((key) => key !== 'notFound') // Exclude non-navigable items
+    .map((key) => ({
+      key,
+      label: navigationConfig[key].label || 'Unnamed Item',
+      icon: navigationConfig[key].icon, // Use the icon from the config
+    }));
 
   return (
     <nav className={navigationMenuClasses.nav}>
@@ -40,7 +41,7 @@ function NavigationMenu(): JSX.Element {
           <div
             key={item.key}
             className={clsx(navigationMenuClasses.item, {
-              [navigationMenuClasses.isActive]: item.key === 'Item1', // Conditionally apply active class
+              [navigationMenuClasses.isActive]: item.key === currentTab, // Conditionally apply active class
             })}
             onClick={() => handleItemSelect(item.key)} // Handle click event
             aria-label={item.label}
@@ -48,7 +49,8 @@ function NavigationMenu(): JSX.Element {
             tabIndex={0} // Make the item focusable for keyboard navigation
             onKeyDown={(e) => e.key === 'Enter' && handleItemSelect(item.key)} // Handle Enter key for selection
           >
-            {item.label}
+            <div className="icon-container">{item.icon}</div>
+            <span className="no-wrap-text">{item.label}</span>
           </div>
         ))}
       </div>

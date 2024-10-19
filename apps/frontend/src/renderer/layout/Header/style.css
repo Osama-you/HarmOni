@@ -16,8 +16,16 @@
 }
 
 .brand {
+  position: relative;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.horns-icon {
+  position: absolute;
+  top: -6px;
+  left: -8.5px;
+  height: 23px;
 }
 
 .brand h3 {
@@ -46,6 +54,10 @@
 @media all and (max-width: 1020px) {
   .header > .content {
     padding: 8px 0;
+  }
+
+  .main {
+    padding-top: 48px !important;
   }
 
   .header .brand,
@@ -188,6 +200,10 @@ body.mobile-nav--is--visible .header .navigation .line:nth-child(2) .content {
 }
 
 @media (max-width: 1020px) {
+  .horns-icon {
+    height: 21px;
+  }
+
   .header .navigation {
     display: flex;
   }

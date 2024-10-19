@@ -29,27 +29,75 @@
 }
 
 /* Sync gutter lines */
-.app-grid-overlay .column:nth-child(1)  .line:nth-child(1)  { transition-delay: 0.00s; }
-.app-grid-overlay .column:nth-child(1)  .line:nth-child(2)  { transition-delay: 0.04s; }
-.app-grid-overlay .column:nth-child(2)  .line:nth-child(1)  { transition-delay: 0.04s; }
-.app-grid-overlay .column:nth-child(2)  .line:nth-child(2)  { transition-delay: 0.08s; }
-.app-grid-overlay .column:nth-child(3)  .line:nth-child(1)  { transition-delay: 0.08s; }
-.app-grid-overlay .column:nth-child(3)  .line:nth-child(2)  { transition-delay: 0.12s; }
-.app-grid-overlay .column:nth-child(4)  .line:nth-child(1)  { transition-delay: 0.12s; }
-.app-grid-overlay .column:nth-child(4)  .line:nth-child(2)  { transition-delay: 0.16s; }
-.app-grid-overlay .column:nth-child(5)  .line:nth-child(1)  { transition-delay: 0.16s; }
-.app-grid-overlay .column:nth-child(5)  .line:nth-child(2)  { transition-delay: 0.20s; }
-.app-grid-overlay .column:nth-child(6)  .line:nth-child(1)  { transition-delay: 0.20s; }
-.app-grid-overlay .column:nth-child(6)  .line:nth-child(2)  { transition-delay: 0.24s; }
-.app-grid-overlay .column:nth-child(7)  .line:nth-child(1)  { transition-delay: 0.24s; }
-.app-grid-overlay .column:nth-child(7)  .line:nth-child(2)  { transition-delay: 0.28s; }
-.app-grid-overlay .column:nth-child(8)  .line:nth-child(1)  { transition-delay: 0.28s; }
-.app-grid-overlay .column:nth-child(8)  .line:nth-child(2)  { transition-delay: 0.32s; }
-.app-grid-overlay .column:nth-child(9)  .line:nth-child(1)  { transition-delay: 0.32s; }
-.app-grid-overlay .column:nth-child(9)  .line:nth-child(2)  { transition-delay: 0.36s; }
-.app-grid-overlay .column:nth-child(10) .line:nth-child(1)  { transition-delay: 0.36s; }
-.app-grid-overlay .column:nth-child(10) .line:nth-child(2)  { transition-delay: 0.40s; }
-.app-grid-overlay .column:nth-child(11) .line:nth-child(1)  { transition-delay: 0.40s; }
-.app-grid-overlay .column:nth-child(11) .line:nth-child(2)  { transition-delay: 0.44s; }
-.app-grid-overlay .column:nth-child(12) .line:nth-child(1)  { transition-delay: 0.44s; }
-.app-grid-overlay .column:nth-child(12) .line:nth-child(2)  { transition-delay: 0.48s; }
+.app-grid-overlay .column:nth-child(1) .line:nth-child(1) {
+  transition-delay: 0s;
+}
+.app-grid-overlay .column:nth-child(1) .line:nth-child(2) {
+  transition-delay: 0.04s;
+}
+.app-grid-overlay .column:nth-child(2) .line:nth-child(1) {
+  transition-delay: 0.04s;
+}
+.app-grid-overlay .column:nth-child(2) .line:nth-child(2) {
+  transition-delay: 0.08s;
+}
+.app-grid-overlay .column:nth-child(3) .line:nth-child(1) {
+  transition-delay: 0.08s;
+}
+.app-grid-overlay .column:nth-child(3) .line:nth-child(2) {
+  transition-delay: 0.12s;
+}
+.app-grid-overlay .column:nth-child(4) .line:nth-child(1) {
+  transition-delay: 0.12s;
+}
+.app-grid-overlay .column:nth-child(4) .line:nth-child(2) {
+  transition-delay: 0.16s;
+}
+.app-grid-overlay .column:nth-child(5) .line:nth-child(1) {
+  transition-delay: 0.16s;
+}
+.app-grid-overlay .column:nth-child(5) .line:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.app-grid-overlay .column:nth-child(6) .line:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.app-grid-overlay .column:nth-child(6) .line:nth-child(2) {
+  transition-delay: 0.24s;
+}
+.app-grid-overlay .column:nth-child(7) .line:nth-child(1) {
+  transition-delay: 0.24s;
+}
+.app-grid-overlay .column:nth-child(7) .line:nth-child(2) {
+  transition-delay: 0.28s;
+}
+.app-grid-overlay .column:nth-child(8) .line:nth-child(1) {
+  transition-delay: 0.28s;
+}
+.app-grid-overlay .column:nth-child(8) .line:nth-child(2) {
+  transition-delay: 0.32s;
+}
+.app-grid-overlay .column:nth-child(9) .line:nth-child(1) {
+  transition-delay: 0.32s;
+}
+.app-grid-overlay .column:nth-child(9) .line:nth-child(2) {
+  transition-delay: 0.36s;
+}
+.app-grid-overlay .column:nth-child(10) .line:nth-child(1) {
+  transition-delay: 0.36s;
+}
+.app-grid-overlay .column:nth-child(10) .line:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.app-grid-overlay .column:nth-child(11) .line:nth-child(1) {
+  transition-delay: 0.4s;
+}
+.app-grid-overlay .column:nth-child(11) .line:nth-child(2) {
+  transition-delay: 0.44s;
+}
+.app-grid-overlay .column:nth-child(12) .line:nth-child(1) {
+  transition-delay: 0.44s;
+}
+.app-grid-overlay .column:nth-child(12) .line:nth-child(2) {
+  transition-delay: 0.48s;
+}

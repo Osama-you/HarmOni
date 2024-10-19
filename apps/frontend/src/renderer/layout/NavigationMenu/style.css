@@ -1,10 +1,18 @@
 .app-nav {
-  position: fixed;
-  top: var(--grid--app-xheight);
-  left: var(--grid--app-margin);
-  z-index: 100;
+  grid-column: 1 / 3;
   -webkit-user-select: none;
   user-select: none;
+  border-right: 1px solid var(--color--foreground--10);
+  padding-top: 100px;
+}
+
+.app-nav .icon-container {
+  width: 2.2rem;
+}
+
+.app-nav svg {
+  width: 100%;
+  height: 100%;
 }
 
 .app-nav .content:hover {
@@ -15,6 +23,34 @@
   font-size: var(--font--size-regular);
   padding: 1px 0;
   color: var(--color--foreground--33);
+  position: relative;
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.app-nav .item > span {
+  margin-top: 10px;
+}
+
+.app-nav .item:hover:before,
+.app-nav .item.is--active:before {
+  content: '';
+  position: absolute;
+  left: calc(var(--grid--app-margin) * -1);
+  width: 2px;
+  height: 100%;
+  border: 2px solid var(--color--foreground--100);
+  color: var(--color--foreground--100);
+  border-radius: 24px;
+}
+
+.app-nav .item.is--active:before {
+  border: 2px solid var(--color--mixed--red);
+}
+
+.app-nav .item.is--active svg {
+  color: var(--color--mixed--red);
 }
 
 .app-nav .item:hover {
@@ -49,6 +85,7 @@
   }
 
   .app-nav {
+    z-index: 100;
     top: 0;
     right: 0;
     bottom: 0;
@@ -61,6 +98,9 @@ backdrop-filter: blur(12px); */
     opacity: 0;
     pointer-events: none;
     display: none;
+    border: unset;
+    grid-column: 1 / -1;
+    height: 100vh;
   }
 
   body.mobile-nav--is--transitioning .app-nav {

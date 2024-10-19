@@ -1,6 +1,6 @@
 @font-face {
-  src: url("../../assets/fonts/Roobert-Medium.woff2") format("woff2");
-  font-family: "HarmOni";
+  src: url('../../assets/fonts/Roobert-Medium.woff2') format('woff2');
+  font-family: 'HarmOni';
   font-style: normal;
   font-weight: 500;
 }

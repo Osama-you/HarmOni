@@ -1,8 +1,9 @@
 import './styles/global.css';
+import './styles/theme/media-queries.css';
 
 import { createRoot } from 'react-dom/client';
 
-import App from './app';
+import App from './core/App';
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);

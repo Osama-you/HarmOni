@@ -2,6 +2,9 @@ import './style.css';
 
 import { useMemo } from 'react';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import hornsImageSource from '../../assets/images/horns.png';
 import { useMobileNav } from '../../hooks/useMobileNav';
 import type { HeaderProps } from './Header.types';
 import { Brand } from './styles';
@@ -19,6 +22,13 @@ function Header({ name = '' }: HeaderProps) {
     <header className="header">
       <div className="content">
         <Brand characterCount={name.length} className="brand">
+          <div className="horns-icon">
+            <img
+              src={hornsImageSource}
+              style={{ width: 'auto', height: '100%' }}
+              alt="Horns logo"
+            />
+          </div>
           <h3>{nameCharacters}</h3>
         </Brand>
         <div className="actions">

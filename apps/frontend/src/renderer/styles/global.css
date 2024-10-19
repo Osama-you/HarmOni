@@ -12,7 +12,7 @@ body {
 }
 
 .section > .content {
-  grid-column: 5 / -1;
+  grid-column: 3 / -1;
 }
 
 .section h1 {
@@ -42,4 +42,10 @@ body {
 .app-main a:hover {
   border-bottom-color: var(--color--foreground--100);
   cursor: pointer;
+}
+
+.no-wrap-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

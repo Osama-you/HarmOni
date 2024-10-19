@@ -1,3 +1,4 @@
+import Breadcrumb from '../components/Breadcrumb';
 import Cover from '../components/Cover';
 import useKeydownEvents from '../hooks/useKeydownEvents';
 import { AppAside } from './AppAside';
@@ -27,12 +28,18 @@ function MainLayout({
       {/* Header uses the appName, which can be passed as a prop or loaded from config */}
       <Header name={appName} />
       <AppAside />
-      <NavigationMenu />
 
       <main className="app-main">
         {/* The Cover component renders the app's cover page */}
         <Cover />
-        {children} {/* Dynamic children elements */}
+        <section className="section" style={{ height: '100vh' }}>
+          <NavigationMenu />
+
+          <div className="content main">
+            <Breadcrumb />
+            {children} {/* Dynamic children elements */}
+          </div>
+        </section>
       </main>
       <GridOverlay />
     </>
